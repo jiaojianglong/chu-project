@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <link href="{% static 'css/video.css' %}" rel="stylesheet" type="text/css">
+    <script type="text/javascript" rel="script" src="{% static 'js/mediaelement.min.js '%}"></script>
+
+    <link href="{% static 'css/photo/fonts.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/photo/style.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/photo/isotope.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/photo/mqueries.css' %}" rel="stylesheet" type="text/css" media="screen" />
+    <script src="{% static 'js/photo/jquery.modernizr.min.js' %}"></script>
+    <title>小视频</title>
+</head>
+<body>
+<div class="top">
+<div class="fixed outer">
+    <div class="fixed-in outer">
+        <ul>
+            <li><a href="/index2/">首页</a> </li>
+            <li><a href="/photo/">照片</a> </li>
+            <li><a href="/video/">视频</a> </li>
+            <li><a href="/content/">留言</a> </li>
+        </ul>
+        <div class="login-button">
+            <a class="keai_login" href="#">小可爱来这登陆</a>
+        </div>
+    </div>
+
+</div>
+    <div class="margin-top"></div>
+<div class="video-top-outer">
+        <video class="video-top" src="{% static 'images/video/57dea81f869fd1663.mp4' %}"  controls preload></video>
+</div>
+</div>
+<div class="mid video">
+    <section id="main">
+    <div class="main_inner wrapper clearfix">
+        <div id="masonry" class="entries clearfix">
+            {% for item in video %}
+                <div class="masonry_item entry post">
+                    <div class="img_holder">
+
+                         <a href="#" rel="#" class="loadcontent">
+                             <img class="video-class" src="{% static item.photo %}" >
+                             <span class="url-video" style="display:none;">{{ item.video }}</span>
+                         </a>
+                    </div>
+
+                    <div class="entry-headline">
+                        <div class="entry-title"><h5><a href="blog-post01.html" rel="Diam nonumy eirmod" class="loadcontent">{{ item.content }}</a></h5></div>
+                        <div class="entry-date">{{ item.time }}</div>
+                    </div>
+
+                    <div class="entry-info">
+{#                        <p>#}
+{#                            Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat magna eros eu erat.#}
+{#                        </p>#}
+
+                        <div class="entry-meta clearfix">
+                            <div class="meta_views right_float">{{ item.seenum }}</div>
+                            <div class="meta_likes right_float"><a href="blog-post01.html" rel="Diam nonumy eirmod" class="loadcontent">{{ item.dianzan }}</a></div>
+                            <div class="meta_comments right_float"><a href="blog-post01.html" rel="Diam nonumy eirmod" class="loadcontent">2</a></div>
+                        </div>
+
+                    </div>
+                </div>
+                {% endfor %}
+
+
+
+            </div><!-- END #masonry -->
+	</div>
+</section>
+</div>
+<script src="{% static 'js/photo/jquery-1.7.1.min.js' %}"></script>
+<script src="{% static 'js/photo/jquery.isotope.min.js' %}"></script>
+<script src='{% static 'js/photo/jquery.easing.1.3.js' %}'></script>
+<script src='{% static 'js/photo/jquery.easing.compatibility.js' %}'></script>
+<script src="{% static 'js/photo/loader.js' %}"></script>
+<script src="{% static 'js/photo/script.js' %}"></script>
+<script src="{% static 'js/video.js' %}"></script>
+</body>
+</html>

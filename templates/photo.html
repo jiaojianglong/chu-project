@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <link href="{% static 'css/photo.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/photo/fonts.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/photo/style.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/photo/isotope.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/photo/mqueries.css' %}" rel="stylesheet" type="text/css" media="screen" />
+    <script src="{%  static 'js/photo/jquery.modernizr.min.js' %}"></script>
+    <title>我们的照片</title>
+</head>
+<body>
+<div class="top">
+<div class="fixed outer">
+    <div class="fixed-in outer">
+        <ul>
+            <li><a href="/index2/">首页</a> </li>
+            <li><a href="/photo/">照片</a> </li>
+            <li><a href="/video/">视频</a> </li>
+            <li><a href="#">留言</a> </li>
+        </ul>
+        <div class="login-button">
+            <a class="keai_login" href="#">小可爱来这登陆</a>
+        </div>
+    </div>
+</div>
+    <div class="top-photo">
+        <span>"思念如马 自别离 未停蹄"</span>
+    </div>
+</div>
+<div class="mid">
+    <section id="pagecontent">
+    <div id="pageloader">
+            <!-- THE LOADED CONTENT WILL SHOW HERE -->
+    </div> <!-- END #pageloader -->
+    </section>
+    <section id="main">
+    <div class="main_inner wrapper clearfix">
+
+        <ul class="filter">
+            <li><a class="active" href="" data-option-value="*">精选</a></li>
+            <li><a href="" data-option-value=".1">第一次 青岛</a></li>
+            <li><a href="" data-option-value=".2">第二次 南京</a></li>
+            <li><a href="" data-option-value=".3">第三次 青岛</a></li>
+            <li><a href="" data-option-value=".4">第四次 南京</a></li>
+            <li><a href="" data-option-value=".5">第五次 青岛</a></li>
+            <a class="upload-photo" href="#" >上传照片</a>
+        </ul>
+
+
+        <div id="masonry" class="entries clearfix">
+            {% for item in photo_obj %}
+
+                <div class="masonry_item entry {{ item.type }}">
+                    <div class="img_holder">
+                            <a href="blog-post01.html" rel="Diam nonumy eirmod" class="loadcontent"><img src="{% static item.photo %}" alt="Blog Post 01"/></a>
+                        </div>
+
+                    <div class="entry-headline">
+                        <div class="entry-title"><h5><a href="blog-post01.html" rel="Diam nonumy eirmod" class="loadcontent">地点：{{ item.address }}</a></h5></div>
+                        <div class="entry-date">时间：{{ item.time }}</div>
+                    </div>
+
+                    <div class="entry-info">
+{#                        <p>#}
+{#                            Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat magna eros eu erat.#}
+{#                        </p>#}
+
+                        <div class="entry-meta clearfix">
+                            <div class="meta_views right_float">{{ item.dianzan }}</div>
+                            <div class="meta_likes right_float"><a href="blog-post01.html" rel="Diam nonumy eirmod" class="loadcontent">12</a></div>
+                            <div class="meta_comments right_float"><a href="blog-post01.html" rel="Diam nonumy eirmod" class="loadcontent">2</a></div>
+                        </div>
+
+                    </div>
+                </div>
+            {% endfor %}
+
+
+            </div><!-- END #masonry -->
+	</div>
+</section> <!-- END #content -->
+</div>
+<div class="load" id="load">
+    <div class="mid">
+        <div class="form-out">
+            <div class="form-top">
+                <span>上传照片</span>
+                <div class="load-exit"></div>
+            </div>
+            <div id="preview">
+                        <img src="{% static 'images/mmexport1475771299253.jpg' %}">
+                </div>
+            <div class="form">
+                <form action="/photo/" method="post" enctype="multipart/form-data" id="formid">
+                    <div class="photo">
+                        <a href="#" class="a_file_name">
+                            {{ photo.photo }}选择照片
+                        </a>
+                    </div>
+                    <div class="type">
+                        {{ photo.type }}
+{#                        <select>#}
+{#                            <option name="type" value="1">第一次 青岛</option>#}
+{#                            <option name="type" value="2">第二次 南京</option>#}
+{#                            <option name="type" value="3">第三次 青岛</option>#}
+{#                            <option name="type" value="4">第四次 南京</option>#}
+{#                            <option name="type" value="5">第五次 青岛</option>#}
+{#                        </select>#}
+                    </div>
+                    <div class="address">
+                        {{ photo.address }}
+{#                        <input type="text" name="address" placeholder="照片拍摄地址">#}
+                    </div>
+                    <input class="button" type="submit" value="提交">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="login" id="login">
+    <div class="mid">
+        <div class="form-out">
+            <div class="form-top">
+                <span>登陆有特权哦</span>
+                <div class="login-exit"></div>
+            </div>
+            <div class="form">
+                <form>
+                    <div class="name">
+                        <input type="text" placeholder="用户名">
+                    </div>
+                    <div class="pwd">
+                        <input type="password" placeholder="密码">
+                    </div>
+                    <input class="button" type="submit" value="登陆">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/photo/jquery-1.7.1.min.js' %}"></script>
+<script src="{% static 'js/photo/jquery.isotope.min.js' %}"></script>
+<script src="{% static 'js/photo/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'js/photo/jquery.easing.compatibility.js' %}"></script>
+<script src="{% static 'js/photo/loader.js' %}"></script>
+<script src="{% static 'js/photo/script.js' %}"></script>
+<script src="{%  static 'js/photo.js' %}"></script>
+</body>
+</html>

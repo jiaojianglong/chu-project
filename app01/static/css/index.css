@@ -1,0 +1,24 @@
+body{
+    margin:0;
+    padding:0;
+}
+.out1{
+    height: 100%;
+    width:100%;
+    position: relative;
+    margin-top:300px;
+}
+.out2{
+}
+p{
+    font-size: 32px;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    display:block;
+    width:270px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+a{
+    color:#000;
+    text-decoration: none;
+}

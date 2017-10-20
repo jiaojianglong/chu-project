@@ -1,0 +1,298 @@
+body{
+    margin:0;
+    padding:0;
+}
+.top{
+    width:1920px;
+    height:500px;
+    background-image: url(../images/149178441673.jpg);
+ margin:0 auto;
+}
+.fixed{
+ width:1920px;
+ height:60px;
+ margin:0 auto;
+ background-color:rgba(0,0,0,0.5);
+ position:fixed;
+ z-index: 9999;
+}
+.fixed .fixed-in{
+ width:1000px;
+ margin:0 auto;
+ height:60px;
+}
+.fixed ul{
+ float:left;
+ height:60px;
+ margin:0;
+}
+.fixed li{
+ float:left;
+ list-style: none;
+}
+.fixed li a{
+ display: inline-block;
+ width:100px;
+ height:100%;
+ color:#fff;
+ font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+ font-size: 20px;
+ font-weight: 200;
+ line-height:60px;
+ text-decoration: none;
+    text-align: center;
+}
+.fixed li a:hover{
+ background-color: rgba(0,0,0,0.1);
+}
+.fixed .login-button{
+ float: right;
+
+}
+.fixed .login-button a{
+ display: inline-block;
+ height:60px;
+ color:#fff;
+ padding:0 10px;
+ font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+ font-size: 20px;
+ font-weight: 200;
+ line-height:60px;
+ text-decoration: none;
+    text-align: center;
+}
+.fixed .login-button a:hover{
+ background-color: rgba(0,0,0,0.1);
+}
+.top .top-photo{
+ width:700px;
+ color:#fff;
+ font-size: 60px;
+ font-weight: 300;
+ font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+ padding-top:180px;
+ padding-left:400px;
+}
+.filter{
+ margin-top:30px;
+ font-size: 14px;
+}
+.upload-photo{
+ display: inline-block;
+ width:100px;
+ float:right;
+ height:40px;
+ background-color:darkcyan ;
+ border-radius: 4px;
+ text-align: center;
+ line-height: 35px;
+ color:#fff;
+}
+.upload-photo:hover{
+ background-color: #2f9787;
+ color:#fff;
+}
+
+
+
+
+.load{
+ width:100%;
+ height:100%;
+ position:fixed;
+ background-color: rgba(0,0,0,0.5);
+ top:0;
+ left:0;
+ display: none;
+ z-index:999999;
+}
+.load .mid{
+ position:absolute;
+ top:50%;
+ height:300px;
+ margin-top:-150px;
+ width:100%;
+}
+.load .mid .form-out{
+ width:450px;
+ height:300px;
+ margin:0 auto;
+ border-radius: 8px;
+ background-color: #fff;
+}
+.load .mid .form-out .form-top{
+ height:30px;
+ width:100%;
+ background-color: darkcyan;
+ border-radius: 8px 8px 0 0;
+ color:#fff;
+ font-size: 16px;
+ font-weight: 300;
+ font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+ text-indent: 10px;
+ line-height: 30px;
+}
+.load .mid .form-out .form{
+ width:150px;
+ height:300px;
+ float: left;
+ margin-left:30px;
+ margin-top:30px;
+}
+.load .mid .form-out .form .a_file_name{
+ width:150px;
+ height:30px;
+ border-radius: 4px;
+ background-color: darkcyan;
+ color:#fff;
+ line-height:30px;
+ text-align: center;
+ overflow: hidden;
+ display: inline-block;
+}
+.load .mid .form-out .form .a_file_name:hover{
+ background-color:#6ccbd6;
+}
+.load .mid .form-out .form #id_photo{
+ position:absolute;
+ width:100%;
+ height:100%;
+ top:0;
+ left:0;
+ opacity: 0;
+ cursor: pointer;
+ filter: alpha(opacity=0);
+ /*border:1px solid darkcyan;*/
+}
+.load .mid .form-out .form select{
+ /*padding:3px 5px;*/
+ width:150px;
+ height:30px;
+ text-align: center;
+ border:1px solid darkcyan;
+}
+.load .mid .form-out .form .address{
+ /*padding:3px 5px;*/
+ width:148px;
+ height:30px;
+ overflow: hidden;
+ border:1px solid darkcyan;
+}
+.load .mid .form-out .form .address input{
+ margin:0 auto;
+ font-size: 14px;
+ width:100%;
+ height:100%;
+ line-height: 30px;
+ border:1px solid #ccc;
+ background:none;
+}
+.load .mid .form-out .form .button{
+ width:100px;
+ color:#fff;
+ background-color:darkcyan;
+ height:30px;
+ border:none;
+ border-radius: 4px;
+ margin-top:40px;
+ float:right;
+}
+#preview{
+ max-width:130px;
+ max-height:198px;
+ overflow: hidden;
+ float: right;
+ margin-right:55px;
+ margin-top:30px;
+}
+#preview img{
+
+}
+.load-exit{
+	background-image:url(../images/tip.png);
+	width:15px;
+	height:15px;
+	background-position: 0 -482px;
+	display: inline-block;
+	float:right;
+	margin-top:7px;
+	margin-right:7px;
+}
+.load-exit:hover{
+ background-position: 0 -499px;
+}
+
+
+.login{
+ width:100%;
+ height:100%;
+ position:fixed;
+ background-color: rgba(0,0,0,0.5);
+ top:0;
+ left:0;
+ z-index:999999;
+ display: none;
+}
+.login .mid{
+ position:absolute;
+ top:50%;
+ height:300px;
+ margin-top:-150px;
+ width:100%;
+}
+.login .mid .form-out{
+ width:450px;
+ height:300px;
+ margin:0 auto;
+ border-radius: 8px;
+ background-color: #fff;
+}
+.login .mid .form-out .form-top{
+ height:30px;
+ width:100%;
+ background-color: darkcyan;
+ border-radius: 8px 8px 0 0;
+ color:#fff;
+ font-size: 16px;
+ font-weight: 300;
+ font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+ text-indent: 10px;
+ line-height: 30px;
+}
+.login .mid .form-out .form{
+
+ width:200px;
+ height:300px;
+ margin:0 auto;
+ margin-top:30px;
+}
+.login .mid .form-out .form input{
+ width:200px;
+ height:25px;
+ text-indent: 6px;
+ margin-top:20px;
+ border:1px solid darkcyan;
+}
+.login .mid .form-out .form .button{
+ width:100px;
+ color:#fff;
+ background-color:darkcyan;
+ height:30px;
+ border:none;
+ border-radius: 4px;
+ margin-top:40px;
+ float:right;
+}
+.login-exit{
+	background-image:url(../images/tip.png);
+	width:15px;
+	height:15px;
+	background-position: 0 -482px;
+	display: inline-block;
+	float:right;
+	margin-top:7px;
+	margin-right:7px;
+}
+.login-exit:hover{
+ background-position: 0 -499px;
+}

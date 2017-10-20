@@ -1,0 +1,62 @@
+body{
+    margin:0;
+    padding:0;
+}
+.fixed{
+ width:1920px;
+ height:60px;
+ margin:0 auto;
+ background-color:rgba(0,0,0,0.5);
+ position:fixed;
+ z-index: 9999;
+}
+.fixed .fixed-in{
+ width:1000px;
+ margin:0 auto;
+ height:60px;
+}
+.fixed ul{
+ float:left;
+ height:60px;
+ margin:0;
+}
+.fixed li{
+ float:left;
+ list-style: none;
+}
+.fixed li a{
+ display: inline-block;
+ width:100px;
+ height:100%;
+ color:#fff;
+ font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+ font-size: 20px;
+ font-weight: 200;
+ line-height:60px;
+ text-decoration: none;
+    text-align: center;
+}
+.fixed li a:hover{
+ background-color: rgba(0,0,0,0.1);
+}
+.fixed .login-button{
+ float: right;
+
+}
+.fixed .login-button a{
+ display: inline-block;
+ height:60px;
+ color:#fff;
+ padding:0 10px;
+ font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+ font-size: 20px;
+ font-weight: 200;
+ line-height:60px;
+ text-decoration: none;
+    text-align: center;
+}
+.fixed .login-button a:hover{
+ background-color: rgba(0,0,0,0.1);
+}
+
+
